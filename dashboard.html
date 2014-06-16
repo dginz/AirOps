@@ -1,0 +1,836 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from admindesigns.com/stardom/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 08 May 2014 15:00:33 GMT -->
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>AirOps</title>
+<!-- <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description" content="Stardom - A Responsive HTML5 Admin UI Template Theme">
+<meta name="author" content="Holladay"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font CSS  -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
+<!-- Core CSS  -->
+<link rel="stylesheet" type="text/css" href="assets/netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/glyphicons_pro/glyphicons.min.css">
+
+<!-- Plugin CSS -->
+<link rel="stylesheet" type="text/css" href="vendor/plugins/calendar/fullcalendar.css">
+<link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/css/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/pages.css">
+<link rel="stylesheet" type="text/css" href="css/plugins.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<!-- Boxed-Layout CSS -->
+<link rel="stylesheet" type="text/css" href="css/boxed.css">
+
+<!-- Demonstration CSS -->
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+<!-- Your Custom CSS -->
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="dashboard">
+<script> var boxtest = localStorage.getItem('boxed'); if (boxtest === 'true') {document.body.className+=' boxed-layout';} </script> 
+<!-- Start: Header -->
+<header class="navbar navbar-fixed-top">
+  <div class="pull-left"><span id="syncStatus">OK</span>&nbsp;Sync Status</div>
+  <div align="center" class="hInfo">
+  <span id="curDate"></span>
+  <span id="curTime"></span>
+  <span id="regi">ZS-PPH</span><span id="type">H25B</span><span id="serial">Serial &#35;401707</span></div>
+  <div class="pull-right header-btns"><button id="onSup">Online Support</button></div>
+</header>
+<!-- End: Header --> 
+<!-- Start: Main -->
+<div id="main"> 
+  <!-- Start: Sidebar -->
+  
+  <!-- End: Sidebar --> 
+  <!-- Start: Content -->
+  <section id="content">
+    <div id="topbar">
+      <ol class="breadcrumb">
+        <li><span class="glyphicons glyphicons-nameplate"></span></li>
+        <li class="active" style="font-variant:small-caps;">Startup</li>
+      </ol>
+    </div>
+    <div class="container" style="height:87px;">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="console-btns">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn" id="stButt">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-nameplate"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Startup</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn" id="oButt">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-airplane"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Operational</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn" id="mButt">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-settings"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Maintenance</div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn" id="suButt">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-notes"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Summary</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      <hr class="short margin-top-none" style="margin:0;">
+      <!--Begin Startup-->
+      <div class="row" id="vStart">
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">CONFIRM</div></div>
+        <div class="panel-body">
+        	<div class="sConf">
+            <table class="tConf">
+            	<tr><td>Registration</td><td>Call Sign</td><td>Current Location</td><td>Date</td><td>Time</td><td></td><td>Status</td>
+                <td rowspan="2"><button class="cfmD">CONFIRMED</button></td>
+                <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
+              <tr><td><select><option>ZS-PPH</option></select></td>
+              		<td><select><option>----</option></select></td>
+                  <td><select><option>DNMM</option></select><span id="fuLoc">&nbsp;murtala mohammed, lagos</span></td>
+                  <td><span id="confDate"></span></td>
+                  <td>Local&#58;&nbsp;<span id="locTime"></span><br>UTC&#58;&nbsp;<span id="utcTime"></span></td>
+                  <td>&nbsp;</td>
+                  <td><span class="cirStat">OK</span></td>
+                  <td>&nbsp;</td><td>&nbsp;</td>
+                  </tr>
+            </table>
+            </div>
+        </div>
+        </div>
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">CREW</div></div>
+        <div class="panel-body">
+        	<div class="sCrew">
+            <table class="tCrew">
+            	<tr><td>PIC</td><td>SIC</td><td>Head C/A</td><td>Add Crew</td><td></td><td></td><td>Status</td>
+                <td rowspan="2"><button class="cfmD">CONFIRMED</button></td>
+                <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
+              <tr><td><select><option>R. Martin</option></select></td>
+                <td><select><option>Q. Vorster</option></select></td>
+                <td><select><option>K. Stander</option></select></td>
+                <td><button class="addBtn">&#43;</button></td>
+                <td></td><td></td>
+                <td><span class="cirStat">OK</span></td>
+                <td></td>
+                <td></td></tr>
+            
+            </table>
+            </div>
+        </div>
+        </div>
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">AIRCRAFT STATUS</div></div>
+        <div class="panel-body">
+        	<div class="sStat">
+            <table class="tStat">
+            	<tr><td>Engine &#35;1</td><td>Engine &#35;2</td><td>Airframe hrs</td><td>Landings</td><td>APU hrs</td><td>Next Inspection</td><td>Status</td>
+                <td rowspan="2"><button class="cfm">CONFIRM</button></td>
+                <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
+              <tr><td>Hours&#58;&nbsp;<span id="ste1hrs">3169.7</span><br>Cycles&#58;&nbsp;<span id="ste1cyc">2633</span></td>
+              <td>Hours&#58;&nbsp;<span id="ste1hrs">3169.7</span><br>Cycles&#58;&nbsp;<span id="ste1cyc">2633</span></td>
+              <td><span id="stAirhrs">3169.7</span></td>
+              <td><span id="stLands">2410</span></td>
+              <td><select><option>312.2</option></select></td>
+              <td><span id="niHrs">400</span>hrs&nbsp;&#64;&nbsp;<span id="niMls">3220.0</span>&nbsp;or&nbsp;<span id="niDate">20 September 2014</span><br>Remaining&#58;&nbsp;<span id="niHrem">50.3</span>&nbsp;&#47;&#47;&nbsp;<span id="niDrem">20<span>&nbsp;days</span></span></td>
+              <td><span class="cirStatA">SEE</span></td>
+              <td></td>
+              <td></td></tr>
+              </table>
+            </div>
+        </div>
+        </div>
+        <div class="multiP"><div class="panel">
+        <div class="panel-heading"><div class="panel-title">DEFECTS</div></div>
+        <div class="panel-body"><div class="sDef">
+            <table class="tDef">
+            	<tr><td>Defect</td><td>AMO</td><td>Pilot</td></tr>
+            	<tr><td>Oil leak from left engine</td><td><span class="ccBox"><input type="checkbox" value="1" class="ccBoxIn"/></span></td><td><input class="ccBoxIn" type="checkbox"></td></tr>
+            	<tr><td>Low flush intermetent</td><td><span class="ccBox"><input type="checkbox"></span></td><td><input type="checkbox"></td></tr>
+            </table></div></div></div>
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">DEFERRED DEFECTS</div></div>
+        <div class="panel-body"><div class="sDefD">
+            <table class="tDefD">
+            	<tr><td>&nbsp;</td><td>remaining</td></tr>
+               <tr><td>RHS Windscreen</td><td class="tDefRem"><span>2</span>&nbsp;days</td></tr>
+               <tr><td>Pilot Oxygen Mask</td><td class="tDefRem"><span>7</span>&nbsp;days</td></tr>
+               <tr><td>Rear Seatbelt Sign U/S</td><td class="tDefRem"><span>23</span>&nbsp;days</td></tr>
+            </table></div></div></div>
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">MEL</div></div>
+        <div class="panel-body"><div class="sMel">
+            <table class="tMel">
+            	<tr><td>&nbsp;</td><td>remaining</td></tr>
+               <tr><td>Defect &#35;1</td><td class="tMelRem"><span>2</span>&nbsp;days</td></tr>
+               <tr><td>Defect &#35;26</td><td class="tMelRem"><span>7</span>&nbsp;days</td></tr></table></div></div></div>
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title"></div></div>
+        <div class="panel-body"><div class="snoHead">
+            <table class="tnoHead">       
+               <tr><td>Status</td>
+                <td rowspan="2"><button class="cfm">CONFIRM</button></td>
+                <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
+                <tr><td><span class="cirStatA">SEE</span></td>
+                <td></td>
+                <td></td></tr>
+            </table></div></div></div>
+        </div>
+        <div class="stFoot" align="center">
+        <button id="airBtn">ACCESS PREVIOUS AIR</button>
+        <button id="exBtn">EXIT</button>
+        <button id="accBtn">ACCEPT</button>
+        </div>
+        
+      </div> <!--End Startup-->
+      <!--Begin Operational-->
+      <div class="row" id="vOper">
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">SECTOR DETAILS</div></div>
+        <div class="panel-body">
+        	<div class="oSec">
+            <table class="tSecD">
+            <tr><td>Sector</td><td>From</td><td>To</td><td>PIC</td><td>SIC</td><td>Head C/A</td><td>PAX</td><td>Nature of Flight</td><td>Client</td>
+            	<td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
+            <tr><td><select id="secOpt"><option>1</option></select></td>
+            	<td><select id="frOpt"><option>DNMM</option></select></td>
+               <td><select id="toOpt"><option>DNAA</option></select></td>
+               <td><select id="picOpt"><option>RM</option></select></td>
+               <td><select id="sicOpt"><option>GV</option></select></td>
+               <td><select id="headOpt"><option>K.S</option></select></td>
+               <td><select id="paxOpt"><option>3</option></select></td>
+               <td><select id="natOpt"><option>Non-Schedule</option></select></td>
+               <td><select id="cliOpt"><option>NPC Oil</option></select></td>
+               <td></td></tr>
+            </table>
+            </div>
+        </div>
+        </div>
+        <div class="panel">
+        <div class="panel-heading"><div class="panel-title">TIMES</div></div>
+        <div class="panel-body">
+        	<div class="oTime">
+            <table class="opTime">
+            	<tr><td>Block Off</td><td>Take-Off</td><td>Landing</td><td>Blocks On</td><td class="bRight">Flight Times</td><td>Dept Fuel</td><td class="bRight">Arr Fuel</td><td>Distance(nm)</td><td>Landings</td></tr>
+              <tr><td><input type="time" id="bOff"></td>
+              <td><input type="time" id="tOff"></td>
+              <td><input type="time" id="lndng"></td>
+              <td><input type="time" id="bOn"></td>
+              <td class="bRight">Block Time&#58&nbsp;<span id="bTime">1.15</span> <br>Flight Time&#58&nbsp;<span id="fTime">0.75</span></td>
+              <td><input type="number" id="dFuel"></td>
+              <td class="bRight"><input type="number" id="aFuel"></td>
+              <td><input type="number" id="nmDist"></td>
+              <td><select id="sLnd"><option>3</option></select></td></tr>
+              <tr><td><button id="bStart">Start</button></td>
+              <td></td><td></td>
+              <td><button id="bStop">Stop</button></td>
+              <td class="bRight"></td>
+              <td colspan="2" class="bRight">Fuel Used&#58;&nbsp;<span id="fUsed">1970</span>&nbsp;lbs<br><button class="addBtn">+</button>&nbsp;Add Fuel Receipt<span></span></td><td></td>
+              <td>KMs&#58;&nbsp;<span id="kmDist">2467</span></td><td></td></tr>
+            </table>
+            </div>
+        </div>
+        </div>
+        
+        <div class="stFoot" align="center">
+        <button id="taBtn">TAB</button>
+        <span class="rptNo">Report &#35;<span id="rptNo">00001</span></span>
+        <button id="subSec">SUBMIT SECTOR</button>
+        </div>
+        
+      </div> <!--End Operational-->
+      <!--Begin Maintenance-->
+      <div class="row" id="vMaint">
+      <!--grouping--><div>
+        <div class="col-md-8" style="width:75%;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel">
+                <div class="panel-heading">
+                  <div class="panel-title"> <i class="fa fa-bar-chart-o"></i> AIRCRAFT STATS</div>
+                </div>
+                <div class="panel-body" align="center">
+                  <div class="stats" align="center"><fieldset><legend>Engine</legend>
+                  <table class="sTable" id="engine">
+                  <tr><td></td><td>&#35; 1</td><td>&#35; 2</td><td>APU</td></tr>
+                  <tr><td>HOURS</td>
+                  	<td><input type="number" id="eHour1"></td>
+                    <td><input type="number" id="eHour2"></td>
+                    <td><input type="number" id="eApu"></td></tr>
+                  <tr><td>CYCLES</td>
+                  <td><input type="number" id="eCycle1"></td>
+                  <td><input type="number" id="eCycle2"></td>
+                  <td></td></tr>
+                  </table></fieldset>
+                  </div>
+                  <div class="stats" align="center"><fieldset><legend>Airframe</legend>
+                  <table class="sTable" id="airframe">
+                  <tr><td>HOURS</td><td><input type="number" id="aHours"></td></tr>
+                  <tr><td>LANDINGS</td><td><input type="number" id="aLand"></td></tr>
+                  </table></fieldset>
+                  </div>
+                  <div class="stats" align="center"><fieldset><legend>Line Maintenance</legend>
+                  <table class="sTable" id="lineMaint">
+                  <tr><td><a href=""><span class="glyphicons glyphicons-circle_plus"></span></a>&nbsp;LOGBOOK</td>
+                  <td><a href=""><span class="glyphicons glyphicons-circle_plus"></span></a>&nbsp;TOP UPS</td></tr>  
+                  </table></fieldset>
+                  </div>
+                </div>
+                <div class="panel-footer" style="display:-webkit-box;font-variant:small-caps;">
+                  <div style="margin-right:25px;font-weight:bold;">Next Inspection&#58;<span id="nHour"></span> &#64;&nbsp;<span id="nOR"></span> or <span id="nDate"></span></div><div style="margin-right:25px;font-weight:bold;">Remaining&#58;&nbsp;<span id="rem"></span></div><div style="margin-right:25px;font-weight:bold;">Status&#58;&nbsp;<span id="stat">ALERT!</span></div>
+                </div>
+              </div>
+            </div></div></div>
+            <div class="col-md-12" style="width:75%;">
+              <div class="panel">
+                <div class="panel-heading">
+                  <div class="panel-title"> <i class="fa fa-chain-broken"></i> DEFECTS &amp; DEFERRED DEFECTS</div>
+                </div>
+                <div class="panel-body" style="padding:5px;">
+                	<table id="dFect" align="center">
+                        <tr style="font-variant: small-caps;font-weight: bold;"><td>Defect</td><td>Date Logged</td><td>Action Taken</td><td>Engineer</td><td>Date</td><td>Status</td><td style="text-align:center;">Remaining<br>(days)</td></tr>
+                        <tr><td><input type="text" style="width:145px"></td><td><input type="date" style="width:110px"></td><td><input type="text" style="width:135px"></td><td><input type="text" style="width:75px"></td><td><input type="date" style="width:110px"></td>
+                        <td><span class="cirStatA">SEE</span></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr>
+                        <tr><td><input type="text" style="width:145px"></td><td><input type="date" style="width:110px"></td><td><input type="text" style="width:135px"></td><td><input type="text" style="width:75px"></td><td><input type="date" style="width:110px"></td>
+                        <td><span class="cirStatW">SEE</span></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr><tr><td id="aDfct"><button data-toggle="modal" data-target="#myModal">Add Defect..</button></td></tr>
+                    </table>
+       <!--Modal--> <div class="modal fade" role="dialog" id="myModal"><div class="modal-dialog">
+                    <div id="nDfct" class="panel modal-content">
+                    	<div class="panel-heading modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><div class="panel-title modal-title">ADD DEFECT</div></div>
+                    	<div class="panel-body modal-body">
+                        <form id="fDfct">
+                        	   Defect&nbsp;<input type="text"><br>
+                            Date&nbsp;<input type="date"><br>
+                            Action Taken&nbsp;<input type="text"><br>
+                            Engineer&nbsp;<input type="text"><br>
+                            Status&nbsp;<input type="text"><br>
+                            Remaining(days)&nbsp;<input type="number">
+                        </form>
+                        </div><div class="panel-footer modal-footer"><button type="button" class="btn btn-primary">Save</button></div>
+                    </div></div></div><!--End Modal-->
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4" style="width:25%;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel" align="center">
+              		<div class="panel-heading"><div class="panel-title"><i class="fa fa-bar-chart-"></i>DOCUMENTATION</div></div>
+                    <table id="docu">
+                    <tr><td style="font-weight:bold;font-size:18px;">Type</td><td style="font-weight:bold;font-size:18px;"">Expiry (days)</td></tr>
+                    <tr><td>crew</td><td><span id="crew">6</span></td></tr>
+                    <tr><td>insurance</td><td><span id="insur">11</span></td></tr>
+                    <tr><td>radio station</td><td><span id="radio">36</span></td></tr>
+                    <tr><td>mass &amp; balance</td><td><span id="mBal">56</span></td></tr>
+                    <tr><td>c of a</td><td><span id="coa">97</span></td></tr>
+                    <tr><td>rvsm certificate</td><td><span id="rvsm">111</span></td></tr>
+                    <tr><td>noise certificate</td><td><span id="noise">167</span></td></tr>
+                    <tr><td>release to service</td><td><span id="rts">183</span></td></tr>
+                    <tr><td>c of r</td><td><span id="cor">---</span></td></tr>
+                    </table> 
+            </div>
+          </div>
+        </div></div>
+        </div><!--grouping-->
+            <div class="col-md-12" style="width:133%;">
+              <div class="panel">
+              		<div class="panel-heading">
+                    <div class="panel-title"> <i class="glyphicons glyphicons-stats"></i> TREND MONITORING</div>
+                    </div>
+                    <div class="panel-body">
+                    	<div class="tMon">
+                        <table><tr><td colspan="6">Flight Details</td></tr>
+                        <tr><td>weight</td><td>oat/sat</td><td>ias</td><td>tas</td><td>mach</td><td>fl</td></tr>
+                        <tr><td class="bord">22750</td><td class="bord">-20</td><td class="bord">264</td><td class="bord">444</td><td class="bord">M.75</td><td class="bord">FL330</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Fuel Flow</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">880</td><td class="bord">880</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">N1</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">92.9</td><td class="bord">93.0</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">N2</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">94.7</td><td class="bord">94.2</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">ITT</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">860</td><td class="bord">848</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Oil Pres.</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">43</td><td class="bord">46</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Oil Temp.</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">77</td><td class="bord">79</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">amps</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">80</td><td class="bord">80</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Fuel Temp.</td></tr>
+                        <tr><td class="bord" rowspan="2">20</td></tr>
+                      </table>
+                    </div>
+                    </div>
+            </div>
+            </div>
+       
+        </div><!--End Maintenance-->
+   <!--Begin Summary-->
+        <div class="row">
+        	<div class="pTop">
+            	<table id="sumTit">
+                <tr><td rowspan="3"><div id="coImg"></div></td><td class="fTitle" id="fTitle" colspan="2"><u>FLIGHT FOLIO TECHNICAL LOG / DEFECT REPORT</u></td><td class="fTitle"></td><td class="fTitle sumDate">Date&#58;&nbsp;<span id="sumDate"></span><br>Log&#58;&nbsp;<span id="logNum">41491</span></td></tr>
+                
+                <tr><td></td><td>Aircraft Registration&#58;&nbsp;<span id="sumRegi">ZS-PPH</span></td>
+                <td>Call Sign&#58;&nbsp;<span id="sumCall">EAN432/433</span>&nbsp;Type&#58;&nbsp;<span id="sumType">H25B</span></td>
+                <td>Aircraft Serial &#35;&#58;&nbsp;<span id="sumSerial">43717</span></td></tr>
+                
+                <tr><td></td><td>Next Inspection&#58;&nbsp;<span id="sumNex">400</span>hrs<span>D &amp; E</span></td>
+                <td>Hours &#47; Date<span id="sumHrs">3229.3</span> &#47; <span id="sumDateN"></span></td>
+                <td>Hours Remaining&#58;&nbsp;<span id="sumRemH">155.7</span></td></tr>
+                </table>
+            </div>
+            <div class="panel">
+            	<div class="panel-heading"><div class="panel-title">CREW</div></div>
+                <div class="panel-body">
+                	<table id="crewSumTbl">
+                    <tr><td>PIC&#58;&nbsp;<span>R. Martin</span>&nbsp;<span>0271011233</span></td>
+                    <td>SIC&#58;&nbsp;<span>G. Visser</span>&nbsp;<span>0274234311</span></td>
+                    <td>H C&#47;A&#58;&nbsp;<span>B. VD Merve</span>&nbsp;<span>A10023</span></td>
+                    <td>C&#47;A&nbsp;&#35;2&#58;&nbsp;<span>K. Stander</span>&nbsp;<span>A10367</span></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="panel">
+            	<div class="panel-heading"><div class="panel-title">SECTOR DETAILS</div></div>
+                <div class="panel-body">
+                	<table id="sumSecD">
+                    <tr><td></td><td></td><td></td><td></td>
+                        <td></td><td></td><td></td><td></td>
+                        <td></td><td></td><td colspan="2">engine hours</td>
+                        <td colspan="2">engine cycles</td><td></td><td></td><td></td>
+                        <td></td><td></td><td></td></tr>
+                        
+                    <tr><td>leg</td><td>from</td><td>to</td><td>dist(nm)</td>
+                        <td>pic</td><td>sic</td><td>h c&#47;a</td><td>block time</td>
+                        <td>flight time</td><td>airframe</td><td>&#35;1</td><td>&#35;2</td>
+                        <td>&#35;1</td><td>&#35;2</td><td>lnds</td><td>fuel</td>
+                        <td>pax</td><td>nature</td><td>client</td></tr>
+                        
+                    <tr><td></td><td></td><td></td><td></td>
+                        <td></td><td></td><td></td><td></td>
+                        <td></td><td><span id="sumAirF">3169.7</span></td><td><span id="sumeHr1">3169.7</span></td><td><span id="sumeHr2">3169.7</span></td>
+                        <td><span id="sumeCy1">3169.7</span></td><td><span id="sumeCy2">3169.7</span></td><td><span id="sumeHr1">2410</span></td><td>(lbs)</td>
+                        <td></td><td></td><td></td></tr>
+                        
+                    <tr><td><span class="sumLeg">1</span></td><td><span class="sumFrm">dnmm</span></td><td><span class="sumTo">dnaa</span></td><td><span class="sumDist">239</span></td>
+                        <td><span class="sumPIC">rm</span></td><td><span class="sumSic">gv</span></td><td><span class="sumHca">b. vdm</span></td>
+                        <td><span class="thTtl">1.0</span>off&#58&nbsp;<span class="btOff">9:10</span><br>on&#58&nbsp;<span class="btOn">10:10</span></td>
+                        <td><span class="thTtl">0.8</span>off&#58&nbsp;<span class="ftOff">9:15</span><br>on&#58&nbsp;<span class="ftOn">10:02</span></td>
+                        <td><span class="afrTtl">0.8</span></td>
+                        <td><span class="enh1Ttl">0.8</span></td>
+                        <td><span class="enh2Ttl">0.8</span></td>
+                        <td><span class="ecy1Ttl">1</span></td>
+                        <td><span class="ecy2Ttl">1</span></td>
+                        <td><span class="lndTtl">1</span></td>
+                        <td><span class="sumFuel">1190</span></td>
+                        <td><span class="sumPax">4</span></td>
+                        <td><span class="sumNat">non-shced</span></td>
+                        <td><span class="sumCli">NPC</span></td></tr>
+                        
+                    <tr><td><span class="sumLeg">2</span></td><td><span class="sumFrm">dnaa</span></td><td><span class="sumTo">dgaa</span></td><td><span class="sumDist">318</span></td>
+                        <td><span class="sumPic">gv</span></td><td><span class="sumSic">rm</span></td><td><span class="sumHca">b .vdm</span></td>
+                        <td><span class="thTtl">1.2</span>off&#58&nbsp;<span class="btOff">10:45</span><br>on&#58&nbsp;<span class="btOn">11:57</span></td>
+                        <td><span class="thTtl">1.0</span>off&#58&nbsp;<span class="ftOff">10:55</span><br>on&#58&nbsp;<span class="ftOn">11:53</span></td>
+                        <td><span class="afrTtl">1.0</span></td>
+                        <td><span class="enh1Ttl">0.8</span></td>
+                        <td><span class="enh2Ttl">0.8</span></td>
+                        <td><span class="ecy1Ttl">1</span></td>
+                        <td><span class="ecy2Ttl">1</span></td>
+                        <td><span class="lndTtl">1</span></td>
+                        <td><span class="sumFuel">1610</span></td>
+                        <td><span class="sumPax">3</span></td>
+                        <td><span class="sumNat">non-shced</span></td>
+                        <td><span class="sumCli">npc</span></td></tr>
+                        
+                    <tr><td><span class="sumLeg">3</span></td><td><span class="sumFrm">dgaa</span></td><td><span class="sumTo">dnaa</span></td><td><span class="sumDist">497</span></td>
+                        <td><span class="sumPIC">rm</span></td><td><span class="sumSic">gv</span></td><td><span class="sumHca">b. vdm</span></td>
+                        <td><span class="thTtl">1.6</span>off&#58&nbsp;<span class="btOff">15:20</span><br>on&#58&nbsp;<span class="btOn">16:55</span></td>
+                        <td><span class="thTtl">1.3</span>off&#58&nbsp;<span class="ftOff">15:37</span><br>on&#58&nbsp;<span class="ftOn">16:53</span></td>
+                        <td><<span class="afrTtl">1.3</span>/td>
+                        <td><span class="enh1Ttl">1.3</span></td>
+                        <td><span class="enh2Ttl">1.3</span></td>
+                        <td><span class="ecy1Ttl">1</span></td>
+                        <td><span class="ecy2Ttl">1</span></td>
+                        <td><span class="lndTtl">1</span></td>
+                        <td><span class="sumFuel">1940</span></td>
+                        <td><span class="sumPax">4</span></td>
+                        <td><span class="sumNat">re-position</span></td>
+                        <td><span class="sumCli">nil</span></td></tr>
+                        
+                    <tr><td><span class="sumLeg">4</span></td><td><span class="sumFrm">dnaa</span></td><td><span class="sumTo">dnmm</span></td><td><span class="sumDist">251</span></td>
+                        <td><span class="sumPIC">gv</span></td><td><span class="sumSic">rm</span></td><td><span class="sumHca">b. vdm</span></td>
+                        <td><span class="thTtl">1.0</span>off&#58&nbsp;<span class="btOff">17:15</span><br>on&#58&nbsp;<span class="btOn">18:45</span></td>
+                        <td><span class="thTtl">0.8</span>off&#58&nbsp;<span class="ftOff">17:26</span><br>on&#58&nbsp;<span class="ftOn">18:15</span></td>
+                        <td><span class="afrTtl">0.8</span></td>
+                        <td><span class="enh1Ttl">0.8</span></td>
+                        <td><span class="enh2Ttl">0.8</span></td>
+                        <td><span class="ecy1Ttl">1</span></td>
+                        <td><span class="ecy2Ttl">1</span></td>
+                        <td><span class="lndTtl">1</span></td>
+                        <td><span class="sumFuel">1270</span></td>
+                        <td><span class="sumPax">8</span></td>
+                        <td><span class="sumNat">non-shced</span></td>
+                        <td><span class="sumCli">dtd</span></td></tr>
+                        
+                    <tr><td></td><td></td><td></td><td></td>
+                        <td></td><td></td><td></td>
+                        <td>Total&#58;<span class="tlBt">4.8</span></td>
+                        <td><span class="tlFt">3.9</span></td>
+                        <td><span class="tlAf">3.9</span></td>
+                        <td><span class="tlEh1">3.9</span></td>
+                        <td><span class="tlEh2">3.9</span></td>
+                        <td><span class="tlEc1">4</span></td>
+                        <td><span class="tlEc2">4</span></td>
+                        <td><span class="tlLnds">4</span></td>
+                        <td><span class="tlFuel">6010</span></td>
+                        <td><span class="tlPax">19</span></td>
+                        <td></td><td></td></tr>
+                        
+                    <tr><td></td><td></td><td></td><td></td>
+                        <td></td><td></td><td></td>
+                        <td colspan="2" style="font-weight:bold;">Grand Total&#58;</td><!--<td></td>-->
+                        <td><span class="gtAf">3173.6</span></td>
+                        <td><span class="gtEh1">3173.6</span></td>
+                        <td><span class="gtEh2">3173.6</span></td>
+                        <td><span class="gtEc1">2637</span></td>
+                        <td><span class="gtEc2">2637</span></td>
+                        <td><span class="gtLnds">2414</span></td>
+                        <td colspan="4">APU Hours&#58;<span class="apuHr">3122</span><br>
+                        APU Hours Remaining<span class="apuHrem">207.3</span></td>
+                        <!--<td></td><td></td><td></td>--></tr>
+                    </table>
+                </div>
+            </div>
+        
+        </div><!--End Summary-->
+  </section>
+  <!-- End: Content --> 
+</div>
+<!-- End: Main --> 
+
+<!-- Core Javascript - via CDN --> 
+<script src="assets/ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="assets/ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+<script src="assets/netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> <!-- Plugins - Via CDN --> 
+<script type="text/javascript" src="assets/cdnjs.cloudflare.com/ajax/libs/flot/0.8.1/jquery.flot.min.js"></script> 
+<script type="text/javascript" src="assets/cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script> 
+<script type="text/javascript" src="assets/ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="assets/cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script> 
+
+<!-- Plugins - Via Local Storage
+<script type="text/javascript" src="vendor/plugins/jqueryflot/jquery.flot.min"></script>
+<script type="text/javascript" src="vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="vendor/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="vendor/plugins/calendar/fullcalendar.min.js"></script>
+--> 
+
+<!-- Plugins --> 
+<script type="text/javascript" src="vendor/plugins/calendar/gcal.js"></script><!-- Calendar Addon --> 
+<script type="text/javascript" src="vendor/plugins/jqueryflot/jquery.flot.resize.min.js"></script><!-- Flot Charts Addon --> 
+<script type="text/javascript" src="vendor/plugins/datatables/js/datatables.js"></script><!-- Datatable Bootstrap Addon --> 
+
+<!-- Theme Javascript --> 
+<script type="text/javascript" src="js/uniform.min.js"></script> 
+<script type="text/javascript" src="js/main.js"></script> 
+<!--<script type="text/javascript" src="js/plugins.js"></script>--> 
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+	  
+	// Init Theme Core 	  
+	Core.init();
+
+	// Init Datatables
+	$('#datatable, #datatable_2').dataTable( {
+	  "bSort": true,
+	  "bPaginate": false,
+	  "bLengthChange": false,
+	  "bFilter": false,
+	  "bInfo": false,
+	  "bAutoWidth": false,
+	  "aoColumnDefs": [{ 'bSortable': false, 'aTargets': [ -1 ] }]
+	});
+	
+	// Init Sparkline Plugin
+ 	var runSparkline = function () {
+		
+		// Define Sparklines values
+		var Values1 = [0,1,5,2,4,3,5,8,7];
+		var Values2 = [3,2,3,1,0,2,5,6,4];
+		var Values3 = [6,4,5,3,4,2,1,2,3];
+		var Values4 = [2,1,2,3,2,4,2,1,0];
+
+	    // Pass values, define options, and create chart
+		$('.sparkbar1').sparkline(Values1, {type: "bar",
+				barColor: "#428bca",
+				barWidth: "8",
+				height: "35"} 
+		);
+		$('.sparkbar2').sparkline(Values2, {type: "bar",
+				barColor: "#5cb85c",
+				barWidth: "8",
+				height: "35"} 
+		);
+		$('.sparkbar3').sparkline(Values3, {type: "bar",
+				barColor: "#5bc0de",
+				barWidth: "8",
+				height: "35"} 
+		);
+		$('.sparkbar4').sparkline(Values4, {type: "bar",
+				barColor: "#777777",
+				barWidth: "8",
+				height: "35"} 
+		);
+		
+		// Quick function to animate the appearance of Sparklines
+		// Only ran on Sparkline elements which have the 
+		// ".sparkline-delay" class and a set data-delay attr
+		(function() {
+			$('.sparkline-delay').each(function() {
+				var This = $(this)
+				var delayTime = $(this).data('delay');
+	
+				$(This).children('canvas').css({"height": "0", "vertical-align": "bottom"});
+				var delayCharts = setTimeout(function () {
+					  $(This).children('canvas').animate({height: 35}, 1800);
+				}, delayTime); 
+			});
+		})();		
+  	}
+
+	// Init Calendar Plugin
+	var runFullCalendar = function () {
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		// Define Calendar options and events
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: true,
+			events: [
+				{
+					title: 'All Day Event',
+					start: new Date(y, m, 9),
+					color: '#008aaf '
+				},
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-3)
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+3, 16, 0),
+					allDay: false
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+10, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false,
+					color: '#0070ab'
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false,
+					color: '#0070ab'
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Mandatory!',
+					start: new Date(y, m, 22),
+					color: '#d10011'
+				}
+			]
+		});
+	}
+
+	// Init Flot Charts Plugin
+	var runFlotCharts = function () {
+		
+	// Define chart clolors ( add more colors if you want or flot will do it automatically
+	var chartColours = ['#5bc0de'];
+
+	// Generate random number for charts
+	randNum = function(){return (Math.floor( Math.random()* (1+40-20) ) ) + 20;}
+
+	// Check if element exist and draw auto updating chart
+	if($(".chart-updating").length) {
+		$(function () {
+			// We use an inline data source in the example, usually data would
+			// be fetched from a server
+			var data = [], totalPoints = 50;
+			function getRandomData() {
+				if (data.length > 0)
+					data = data.slice(1);
+
+				while (data.length < totalPoints) {
+					var prev = data.length > 0 ? data[data.length - 1] : 50;
+					var y = prev + Math.random() * 10 - 5;
+					if (y < 0)
+						y = 0;
+					if (y > 100)
+						y = 100;
+					data.push(y);
+				}
+
+				var res = [];
+				for (var i = 0; i < data.length; ++i)
+					res.push([i, data[i]])
+				return res;
+			}
+
+			var updateInterval = 750;
+
+			var options = {
+				series: { 
+					shadowSize: 0, // drawing is faster without shadows
+					lines: {
+						show: true,
+						fill: true,
+						fillColor: { colors: ['rgba(47, 137, 214, 0.4)', 'rgba(98, 174, 239, 0.3)'] },
+						lineWidth: 1,
+						steps: false
+					},
+					points: {
+						show: false,
+						radius: 2.5,
+						symbol: "circle",
+						lineWidth: 2.5
+					}
+				},
+				grid: {
+					show: true,
+					aboveData: false,
+					color: "#3f3f3f",
+					labelMargin: 5,
+					axisMargin: 0, 
+					borderWidth: 0,
+					borderColor:null,
+					minBorderMargin: 5 ,
+					clickable: true, 
+					hoverable: true,
+					autoHighlight: false,
+					mouseActiveRadius: 20
+				}, 
+				colors: chartColours,
+				yaxis: { 
+					 min: 0,
+					 max: 100,
+					 font: {size: 11,	color: "#888888"}
+				},
+				xaxis: { 
+					 show: true,
+					 font: {size: 11,	color: "#888888"}
+				}
+			};
+			var plot = $.plot($(".chart-updating"), [ getRandomData() ], options);
+
+			function update() {
+				plot.setData([ getRandomData() ]);
+				// since the axes don't change, we don't need to call plot.setupGrid()
+				plot.draw();
+				
+				setTimeout(update, updateInterval);
+			}
+			update();
+		});
+	  }
+  }
+     
+  runSparkline();
+  runFullCalendar();	  
+  runFlotCharts();
+  
+  // Example animations for Header Dropdown Menus - For Demo Purposes
+  $('.header-btns > div').on('show.bs.dropdown', function() {
+	  $(this).children('.dropdown-menu').addClass('animated animated-short flipInY');
+  });
+  $('.header-btns > div').on('hide.bs.dropdown', function() {
+	  $(this).children('.dropdown-menu').removeClass('animated flipInY');
+  });
+			  
+
+});
+</script>
+</body>
+
+<!-- Mirrored from admindesigns.com/stardom/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 08 May 2014 15:00:33 GMT -->
+</html>
