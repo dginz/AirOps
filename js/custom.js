@@ -32,7 +32,7 @@ $(document).ready(function(){
 		});
 	$("#suButt").on("click",function(){
 		$("#vOper,#vMaint,#vStart").hide("fast");
-		$("#vSum").show("slow");
+		$("#vSumm").show("slow");
 		$("ol.breadcrumb span").attr("class","glyphicons glyphicons-notes");
 		$("ol.breadcrumb li:nth-child(2)").html("Summary");
 		});

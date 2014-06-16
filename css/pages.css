@@ -854,19 +854,19 @@ body.minimal{background: #f4f4f4;}
   .pull-left{padding:10px;}
   input[type=date]{line-height:inherit;}
 .stats{height:125px;width:33%;border:medium ridge lightgray;display:inline-table;}
-#onSup{background-color: #000f89;color: white;font-weight: bold;}
+#onSup{background-color: #000f89;color: white;font-weight: bold;border:1px solid black;}
 #engine, #airframe, #lineMaint{width:100%;}
 td span{font-weight:bold;}
 legend{font-variant:small-caps; font-size:18px;margin-bottom:5px}
 .stats input{width:45px;font-size:11px;margin-bottom:4px;}
 #docu{font-variant:small-caps;text-align:left;}#docu span{width:45px;}#docu td{padding:9px;}#docu td:nth-child(2){text-align:center;}#docu td:nth-child(1){font-size:14px;width:100%;}
 span#nHour,span#rem, span#nOR{width:45px;font-size:11px;margin-left:5px;}span#nDate{width:125px;font-size:11px;line-height:inherit;}span#stat{width:50px;}
-#syncStatus {border-radius:50%;background-color:green;color:white;font-weight:bold;padding:4px;border:1px solid black;}
+#syncStatus {border-radius:50%;background-color:green;color:white;font-weight:bold;padding:4px;border:2px solid black;}
 .hInfo span{font-weight:bold;margin-right:35px;}
 #vMaint,#vOper,#vSumm{display:none;}
 #dFect input[type=date]{}#dFect td{padding-right:10px;text-align:center;}
 .tMon{font-variant:small-caps;width:100%;display:inline-flex;}.tMon table{margin-right:10px;border-bottom:none;border:1px black solid;border-collapse:inherit;width:8.7%}.tMon td{padding:2px;text-align:center;}.tMon th{text-align:center;}.bord{border:1px solid black;}
-.cirStat,.cirStatA,.cirStatW{width:25px;height:25px;font-size:12px;border-radius: 50%;color: white;font-weight: bold;padding: 2px;border:1px solid black;}
+.cirStat,.cirStatA,.cirStatW{width:30px;height:30px;font-size:12px;border-radius: 50%;color: white;font-weight: bold;padding: 1px;border:2px solid black;}
 .cirStat{background-color: green;}.cirStatA{background-color: orange;}.cirStatW{background-color: white;}
 
 #niDrem{color:#FFBF00;font-weight:bold;}.addBtn{width:25px;height:25px;font-size:14px;border-radius: 50%;background-color: #CC0000;color: white;font-weight: bold;padding: 2px;border:1px solid black;}
@@ -875,12 +875,16 @@ span#nHour,span#rem, span#nOR{width:45px;font-size:11px;margin-left:5px;}span#nD
 #aDfct{text-align:left !important;padding-top:7px;font-variant:small-caps;font-weight:bold;}#nDfct{display:none;}#fDfct{font-variant:small-caps;width:100px;font-weight:bold;font-size:16px}#fDfct input{}.modal-title,#fuLoc{font-variant:small-caps;}
 .ccBox{width: 20px;height: 20px;background: #ddd;border-radius: 100%;position: relative;-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);box-shadow: 0px 1px 3px rgba(0,0,0,0.5);}
 table{width:100%;text-align:center;}.multiP{display:inline-flex;width:100%;}.multiP .panel{width:25%;}.multiP .panel:nth-child(1){width:30%;}.multiP .panel:nth-child(3){width:20%;} table tr:nth-child(1){font-weight:bold;font-variant:small-caps;font-size:15px;}#locTime,#curDate{font-weight:bold;}
-.cfmD{background-color:green;color:white;border:1px solid black;}span.glyphicons{color:#CC0000;}.breadcrumb .glyphicons{color:#000f89}.breadcrumb .active{color:#CC0000;opacity:0.7;}
-#airBtn{width:200px;height:60px;float:left;margin:10px;color:white;background-color:#000f89;font-size:15px;font-weight:bold;} #exBtn{width:120px;height:60px;margin:10px;color:white;background-color:#CC0000;font-size:15px;font-weight:bold;} #accBtn{width:200px;height:60px;float:right;margin:10px;color:black;background-color:orange;font-size:15px;font-weight:bold;}
-#bStart, #bStop{color:white;font-weight:bold;width:100px;height:35px;}#bStart{background-color:green;}#bStop{background-color:#CC0000;}#dFuel,#aFuel,#nmDist{max-width:85%;}.opTime td{max-width:140px;}.bRight{border-right:1px black solid;}
+.cfmD{background-color:green;color:white;border:2px solid black;}span.glyphicons{color:#CC0000;}.breadcrumb .glyphicons{color:#000f89}.breadcrumb .active{color:#CC0000;opacity:0.7;}.cfm{border:2px solid black;background-color:white;color:000f89;}
+#airBtn{border:2px solid black;width:200px;height:60px;float:left;margin:10px;color:white;background-color:#000f89;font-size:15px;font-weight:bold;} #exBtn{border:2px solid black;width:120px;height:60px;margin:10px;color:white;background-color:#CC0000;font-size:15px;font-weight:bold;} #accBtn{border:2px solid black;width:200px;height:60px;float:right;margin:10px;color:black;background-color:orange;font-size:15px;font-weight:bold;}
+#bStart, #bStop{border:2px solid black;color:white;font-weight:bold;width:100px;height:35px;}#bStart{background-color:green;}#bStop{background-color:#CC0000;}#dFuel,#aFuel,#nmDist{max-width:85%;}.opTime td{max-width:140px;}.bRight{border-right:1px black solid;}
 #taBtn,#subSec,.rptNo{width:150px;height:35px;color:white;font-weight:bold;font-size:15px}
-#taBtn{float:left;background-color:#00BFFF;margin-left:25px;}#subSec{float:right;background-color:#000f89;margin-right:25px;}.rptNo{color:#CC0000}.edBtn{color:#000F89;}
+#taBtn{border:2px solid black;float:left;background-color:#00BFFF;margin-left:25px;}#subSec{border:2px solid black;float:right;background-color:#000f89;margin-right:25px;}.rptNo{color:#CC0000}.edBtn{border:2px solid black;color:#000F89;background-color:white;}
 #coImg{width:200px;height:150px;margin-left:45px;border:1px solid black;}#fTitle{font-size:18px;}
 .fTitle{border-bottom:1px solid black;}#sumTit tr td:nth-child(4), #sumTit tr td:nth-child(3){text-align:left;}
 #sumTit tr:nth-child(3) td{border-bottom:1px solid black;}#crewSumTbl tr{font-weight:normal}#crewSumTbl{dont-weight:bold;};
-.thTtl{font-weight:bold;float:right;}.apuHr,.apuHrem{float:right;}#sumSecD td{border:1px solid black}
+.thTtl{font-weight:bold;float:right;}.apuHr,.apuHrem{float:right;}
+#sumSecD,#sumSecD td{border:2px solid black}#sumSecD tr:nth-child(1) td{border:none;}.noBord{border:none !important;}.noBordB{border:none !important;font-weight:700;}
+.sumDef{font-variant:normal;}.trUnd{text-decoration:underline;}#subAir{width:18%;background-color:green;font-weight:bold;font-size:20px;border:2px solid black;height:117px;margin-left:5px;}
+#sumDef tr td:nth-child(1){}
+#dClaim{text-align:center;font-variant:normal;font-size:12px;}

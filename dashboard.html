@@ -133,7 +133,7 @@
                   <td><span id="confDate"></span></td>
                   <td>Local&#58;&nbsp;<span id="locTime"></span><br>UTC&#58;&nbsp;<span id="utcTime"></span></td>
                   <td>&nbsp;</td>
-                  <td><span class="cirStat">OK</span></td>
+                  <td><button class="cirStat">OK</button></td>
                   <td>&nbsp;</td><td>&nbsp;</td>
                   </tr>
             </table>
@@ -153,7 +153,7 @@
                 <td><select><option>K. Stander</option></select></td>
                 <td><button class="addBtn">&#43;</button></td>
                 <td></td><td></td>
-                <td><span class="cirStat">OK</span></td>
+                <td><button class="cirStat">OK</button></td>
                 <td></td>
                 <td></td></tr>
             
@@ -175,7 +175,7 @@
               <td><span id="stLands">2410</span></td>
               <td><select><option>312.2</option></select></td>
               <td><span id="niHrs">400</span>hrs&nbsp;&#64;&nbsp;<span id="niMls">3220.0</span>&nbsp;or&nbsp;<span id="niDate">20 September 2014</span><br>Remaining&#58;&nbsp;<span id="niHrem">50.3</span>&nbsp;&#47;&#47;&nbsp;<span id="niDrem">20<span>&nbsp;days</span></span></td>
-              <td><span class="cirStatA">SEE</span></td>
+              <td><button class="cirStatA">SEE</button></td>
               <td></td>
               <td></td></tr>
               </table>
@@ -213,7 +213,7 @@
                <tr><td>Status</td>
                 <td rowspan="2"><button class="cfm">CONFIRM</button></td>
                 <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
-                <tr><td><span class="cirStatA">SEE</span></td>
+                <tr><td><button class="cirStatA">SEE</button></td>
                 <td></td>
                 <td></td></tr>
             </table></div></div></div>
@@ -283,7 +283,27 @@
       </div> <!--End Operational-->
       <!--Begin Maintenance-->
       <div class="row" id="vMaint">
-      <!--grouping--><div>
+      <!--grouping<div style="width:100%;">-->
+      <div class="col-md-4" style="width:25%;float:right;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel" align="center">
+              		<div class="panel-heading"><div class="panel-title"><i class="fa fa-bar-chart-"></i>DOCUMENTATION</div></div>
+                    <table id="docu">
+                    <tr><td style="font-weight:bold;font-size:18px;">Type</td><td style="font-weight:bold;font-size:18px;"">Expiry (days)</td></tr>
+                    <tr><td>crew</td><td><span id="crew">6</span></td></tr>
+                    <tr><td>insurance</td><td><span id="insur">11</span></td></tr>
+                    <tr><td>radio station</td><td><span id="radio">36</span></td></tr>
+                    <tr><td>mass &amp; balance</td><td><span id="mBal">56</span></td></tr>
+                    <tr><td>c of a</td><td><span id="coa">97</span></td></tr>
+                    <tr><td>rvsm certificate</td><td><span id="rvsm">111</span></td></tr>
+                    <tr><td>noise certificate</td><td><span id="noise">167</span></td></tr>
+                    <tr><td>release to service</td><td><span id="rts">183</span></td></tr>
+                    <tr><td>c of r</td><td><span id="cor">---</span></td></tr>
+                    </table> 
+            </div>
+          </div>
+        </div></div>
         <div class="col-md-8" style="width:75%;">
           <div class="row">
             <div class="col-md-12">
@@ -332,9 +352,9 @@
                 	<table id="dFect" align="center">
                         <tr style="font-variant: small-caps;font-weight: bold;"><td>Defect</td><td>Date Logged</td><td>Action Taken</td><td>Engineer</td><td>Date</td><td>Status</td><td style="text-align:center;">Remaining<br>(days)</td></tr>
                         <tr><td><input type="text" style="width:145px"></td><td><input type="date" style="width:110px"></td><td><input type="text" style="width:135px"></td><td><input type="text" style="width:75px"></td><td><input type="date" style="width:110px"></td>
-                        <td><span class="cirStatA">SEE</span></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr>
+                        <td><button class="cirStatA">SEE</button></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr>
                         <tr><td><input type="text" style="width:145px"></td><td><input type="date" style="width:110px"></td><td><input type="text" style="width:135px"></td><td><input type="text" style="width:75px"></td><td><input type="date" style="width:110px"></td>
-                        <td><span class="cirStatW">SEE</span></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr><tr><td id="aDfct"><button data-toggle="modal" data-target="#myModal">Add Defect..</button></td></tr>
+                        <td><button class="cirStatW">SEE</button></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr><tr><td id="aDfct"><button data-toggle="modal" data-target="#myModal">Add Defect..</button></td></tr>
                     </table>
        <!--Modal--> <div class="modal fade" role="dialog" id="myModal"><div class="modal-dialog">
                     <div id="nDfct" class="panel modal-content">
@@ -353,28 +373,8 @@
                   </div>
               </div>
             </div>
-            <div class="col-md-4" style="width:25%;">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel" align="center">
-              		<div class="panel-heading"><div class="panel-title"><i class="fa fa-bar-chart-"></i>DOCUMENTATION</div></div>
-                    <table id="docu">
-                    <tr><td style="font-weight:bold;font-size:18px;">Type</td><td style="font-weight:bold;font-size:18px;"">Expiry (days)</td></tr>
-                    <tr><td>crew</td><td><span id="crew">6</span></td></tr>
-                    <tr><td>insurance</td><td><span id="insur">11</span></td></tr>
-                    <tr><td>radio station</td><td><span id="radio">36</span></td></tr>
-                    <tr><td>mass &amp; balance</td><td><span id="mBal">56</span></td></tr>
-                    <tr><td>c of a</td><td><span id="coa">97</span></td></tr>
-                    <tr><td>rvsm certificate</td><td><span id="rvsm">111</span></td></tr>
-                    <tr><td>noise certificate</td><td><span id="noise">167</span></td></tr>
-                    <tr><td>release to service</td><td><span id="rts">183</span></td></tr>
-                    <tr><td>c of r</td><td><span id="cor">---</span></td></tr>
-                    </table> 
-            </div>
-          </div>
-        </div></div>
-        </div><!--grouping-->
-            <div class="col-md-12" style="width:133%;">
+        <!--grouping</div>-->
+            <div class="col-md-12" style="width:100%;">
               <div class="panel">
               		<div class="panel-heading">
                     <div class="panel-title"> <i class="glyphicons glyphicons-stats"></i> TREND MONITORING</div>
@@ -423,7 +423,7 @@
        
         </div><!--End Maintenance-->
    <!--Begin Summary-->
-        <div class="row">
+        <div class="row" id="vSumm">
         	<div class="pTop">
             	<table id="sumTit">
                 <tr><td rowspan="3"><div id="coImg"></div></td><td class="fTitle" id="fTitle" colspan="2"><u>FLIGHT FOLIO TECHNICAL LOG / DEFECT REPORT</u></td><td class="fTitle"></td><td class="fTitle sumDate">Date&#58;&nbsp;<span id="sumDate"></span><br>Log&#58;&nbsp;<span id="logNum">41491</span></td></tr>
@@ -432,12 +432,12 @@
                 <td>Call Sign&#58;&nbsp;<span id="sumCall">EAN432/433</span>&nbsp;Type&#58;&nbsp;<span id="sumType">H25B</span></td>
                 <td>Aircraft Serial &#35;&#58;&nbsp;<span id="sumSerial">43717</span></td></tr>
                 
-                <tr><td></td><td>Next Inspection&#58;&nbsp;<span id="sumNex">400</span>hrs<span>D &amp; E</span></td>
+                <tr><td></td><td>Next Inspection&#58;&nbsp;<span id="sumNex">400 </span>hrs<span>D &amp; E</span></td>
                 <td>Hours &#47; Date<span id="sumHrs">3229.3</span> &#47; <span id="sumDateN"></span></td>
                 <td>Hours Remaining&#58;&nbsp;<span id="sumRemH">155.7</span></td></tr>
                 </table>
             </div>
-            <div class="panel">
+            <div class="panel" style="margin-top:10px;">
             	<div class="panel-heading"><div class="panel-title">CREW</div></div>
                 <div class="panel-body">
                 	<table id="crewSumTbl">
@@ -454,21 +454,21 @@
                 	<table id="sumSecD">
                     <tr><td></td><td></td><td></td><td></td>
                         <td></td><td></td><td></td><td></td>
-                        <td></td><td></td><td colspan="2">engine hours</td>
-                        <td colspan="2">engine cycles</td><td></td><td></td><td></td>
-                        <td></td><td></td><td></td></tr>
+                        <td></td><td></td><td colspan="2" style="border:2px solid black;">engine hours</td>
+                        <td colspan="2" style="border:2px solid black;">engine cycles</td><td></td><td></td><td></td>
+                        <td></td><td></td></tr>
                         
-                    <tr><td>leg</td><td>from</td><td>to</td><td>dist(nm)</td>
-                        <td>pic</td><td>sic</td><td>h c&#47;a</td><td>block time</td>
-                        <td>flight time</td><td>airframe</td><td>&#35;1</td><td>&#35;2</td>
-                        <td>&#35;1</td><td>&#35;2</td><td>lnds</td><td>fuel</td>
-                        <td>pax</td><td>nature</td><td>client</td></tr>
+                    <tr style="font-weight:700;font-size:16px;"><td class="noBord">leg</td><td class="noBord">from</td><td class="noBord">to</td><td class="noBord">dist(nm)</td>
+                        <td class="noBord">pic</td><td class="noBord">sic</td><td class="noBord">h c&#47;a</td><td class="noBord">block time</td>
+                        <td class="noBord">flight time</td><td>airframe</td><td style="font-size:12px;">&#35;1</td><td style="font-size:12px;">&#35;2</td>
+                        <td style="font-size:12px;">&#35;1</td><td style="font-size:12px;">&#35;2</td><td>lnds</td><td class="noBord">fuel</td>
+                        <td class="noBord">pax</td><td class="noBord">nature</td><td class="noBord">client</td></tr>
                         
-                    <tr><td></td><td></td><td></td><td></td>
-                        <td></td><td></td><td></td><td></td>
-                        <td></td><td><span id="sumAirF">3169.7</span></td><td><span id="sumeHr1">3169.7</span></td><td><span id="sumeHr2">3169.7</span></td>
-                        <td><span id="sumeCy1">3169.7</span></td><td><span id="sumeCy2">3169.7</span></td><td><span id="sumeHr1">2410</span></td><td>(lbs)</td>
-                        <td></td><td></td><td></td></tr>
+                    <tr><td class="noBord"></td><td class="noBord"></td><td class="noBord"></td><td class="noBord"></td>
+                        <td class="noBord"></td><td class="noBord"></td><td class="noBord"></td><td class="noBord" colspan="2">Totals carried forward </td>
+                        <td><span id="sumAirF">3169.7</span></td><td><span id="sumeHr1">3169.7</span></td><td><span id="sumeHr2">3169.7</span></td>
+                        <td><span id="sumeCy1">3169.7</span></td><td><span id="sumeCy2">3169.7</span></td><td><span id="sumeHr1">2410</span></td><td class="noBordB">(lbs)</td>
+                        <td class="noBord"></td><td class="noBord"></td><td class="noBord"></td></tr>
                         
                     <tr><td><span class="sumLeg">1</span></td><td><span class="sumFrm">dnmm</span></td><td><span class="sumTo">dnaa</span></td><td><span class="sumDist">239</span></td>
                         <td><span class="sumPIC">rm</span></td><td><span class="sumSic">gv</span></td><td><span class="sumHca">b. vdm</span></td>
@@ -530,8 +530,8 @@
                         <td><span class="sumNat">non-shced</span></td>
                         <td><span class="sumCli">dtd</span></td></tr>
                         
-                    <tr><td></td><td></td><td></td><td></td>
-                        <td></td><td></td><td></td>
+                    <tr><td class="noBord"></td><td class="noBord"></td><td class="noBord"></td><td class="noBord"></td>
+                        <td class="noBord"></td><td class="noBord"></td><td class="noBord"></td>
                         <td>Total&#58;<span class="tlBt">4.8</span></td>
                         <td><span class="tlFt">3.9</span></td>
                         <td><span class="tlAf">3.9</span></td>
@@ -544,21 +544,63 @@
                         <td><span class="tlPax">19</span></td>
                         <td></td><td></td></tr>
                         
-                    <tr><td></td><td></td><td></td><td></td>
-                        <td></td><td></td><td></td>
-                        <td colspan="2" style="font-weight:bold;">Grand Total&#58;</td><!--<td></td>-->
+                    <tr><td class="noBord"></td><td class="noBord"></td><td class="noBord"></td><td class="noBord"></td>
+                        <td class="noBord"></td><td class="noBord"></td><td class="noBord"></td>
+                        <td colspan="2" class="noBordB">Grand Total&#58;</td><!--<td></td>-->
                         <td><span class="gtAf">3173.6</span></td>
                         <td><span class="gtEh1">3173.6</span></td>
                         <td><span class="gtEh2">3173.6</span></td>
                         <td><span class="gtEc1">2637</span></td>
                         <td><span class="gtEc2">2637</span></td>
                         <td><span class="gtLnds">2414</span></td>
-                        <td colspan="4">APU Hours&#58;<span class="apuHr">3122</span><br>
+                        <td colspan="4" class="noBord">APU Hours&#58;<span class="apuHr">3122</span><br>
                         APU Hours Remaining<span class="apuHrem">207.3</span></td>
                         <!--<td></td><td></td><td></td>--></tr>
                     </table>
                 </div>
             </div>
+            <div class="panel">
+            	<div class="panel-heading"><div class="panel-title">DEFECTS</div></div>
+                <div class="panel-body">
+                	<table id="sumDef">
+                    <tr class="trUnd"><td>pilot entry</td><td>action &# deferred</td><td>date</td><td>engineer</td><td>days remaining</td></tr>
+                    <tr>
+                    	<td><span class="sumDefN">1.&nbsp;</span><span class="sumDef">Left Engine ITT fluctuating through FL 180</span></td>
+                        <td><span class="sumDefActN">1.&nbsp;</span><span class="sumDefActN">New lamp sensor on order</span></td>
+                        <td><span class="sumDefDate">17 July 2014</span></td>
+                        <td><span class="sumDefEng">M. Mason</span></td>
+                        <td><span class="sumDefRem">16</span></td>
+                    </tr>
+                    <tr>
+                    	<td><span class="sumDefN">2.&nbsp;</span><span class="sumDef">Low flush intermittent</span></td>
+                        <td><span class="sumDefActN">nil</span></td>
+                        <td><span class="sumDefDate">nil</span></td>
+                        <td><span class="sumDefEng">nil</span></td>
+                        <td><span class="sumDefRem">nil</span></td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="multiP"><div class="panel" style="width:40%">
+            <div class="panel-heading"><div class="panel-title">PRE FLIGHT</div></div>
+                <div class="panel-body">
+                <table>
+                <tr class="trUnd"><td>engineer pre flight</td><td>pilots acceptance</td></tr>
+                <tr><td>name&#58;&nbsp;<span class="pfEng">M. Mason</span></td><td>name&#58;&nbsp;<span class="pfPil">R. Martin</span></td></tr>
+                </table>
+                </div>
+            </div>
+            <div class="panel" style="width:40%">
+            <div class="panel-heading"><div class="panel-title">POST FLIGHT</div></div>
+                <div class="panel-body">
+                <table>
+                <tr class="trUnd"><td>pilots approval</td><td>engineer sign in</td></tr>
+                <tr><td>name&#58;&nbsp;<span class="pfEng">R. Martin</span></td><td>name&#58;&nbsp;<span class="pfPil">nil</span></td></tr>
+                </table>
+                </div>
+            </div>
+            <button id="subAir">SUBMIT AIR</button></div>
+            <div id="dClaim">By submitting the above AIR it will be taken that the information is correct and true and complies with all requirements prescribed in the Civil Aviation Regulations 1997.</div>
         
         </div><!--End Summary-->
   </section>
