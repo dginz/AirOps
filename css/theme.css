@@ -86,7 +86,8 @@ body {
   margin-left: 240px;
   display: block;
   min-height: 100%;
-  position: relative; }
+  position: relative;
+  background-color:white;}
 
 #content:after {
   content: "";
