@@ -138,18 +138,18 @@
         <div class="panel">
         <div class="panel-heading"><div class="panel-title">CONFIRM</div></div>
         <div class="panel-body">
-        	<div class="sConf"><form>
+        	<div class="sConf"><form id="fConf">
             <table class="tConf">
             	<tr><td>Registration</td><td>Call Sign</td><td>Current Location</td><td>Date</td><td>Time</td><td></td><td>Status</td>
                 <td rowspan="2"><button class="cfm">CONFIRM</button></td>
                 <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
               <tr><td><select><option>ZS-PPH</option></select></td>
-              		<td><input type="text" id="clSgn"</td>
+              		<td><input type="text" id="clSgn"></td>
                   <td><select><option>DNMM</option><option>DNAA</option></select><span id="fuLoc">&nbsp;murtala mohammed, lagos</span></td>
                   <td><span id="confDate"></span></td>
                   <td>Local&#58;&nbsp;<span id="locTime"></span><br>UTC&#58;&nbsp;<span id="utcTime"></span></td>
                   <td>&nbsp;</td>
-                  <td><button class="cirStatW">OK</button></td>
+                  <td><button class="cirStatW"></button></td>
                   <td>&nbsp;</td><td>&nbsp;</td>
                   </tr>
             </table></form>
@@ -159,7 +159,7 @@
         <div class="panel">
         <div class="panel-heading"><div class="panel-title">CREW</div></div>
         <div class="panel-body">
-        	<div class="sCrew">
+        	<div class="sCrew"><form id="fCrew">
             <table class="tCrew">
             	<tr><td>PIC</td><td>SIC</td><td>Head C/A</td><td>Add Crew</td><td></td><td></td><td>Status</td>
                 <td rowspan="2"><button class="cfm">CONFIRM</button></td>
@@ -169,18 +169,18 @@
                 <td><select><option>K. Stander</option></select></td>
                 <td><button class="addBtn">&#43;</button></td>
                 <td></td><td></td>
-                <td><button class="cirStatW">OK</button></td>
+                <td><button class="cirStatW"></button></td>
                 <td></td>
                 <td></td></tr>
             
-            </table>
+            </table></form>
             </div>
         </div>
         </div>
         <div class="panel">
         <div class="panel-heading"><div class="panel-title">AIRCRAFT STATUS</div></div>
         <div class="panel-body">
-        	<div class="sStat">
+        	<div class="sStat"><form id="fAirStat">
             <table class="tStat">
             	<tr><td>Engine &#35;1</td><td>Engine &#35;2</td><td>Airframe hrs</td><td>Landings</td><td>APU hrs</td><td>Next Inspection</td><td>Status</td>
                 <td rowspan="2"><button class="cfm">CONFIRM</button></td>
@@ -191,14 +191,14 @@
               <td><span id="stLands">2410</span></td>
               <td><select><option>312.2</option></select></td>
               <td><span id="niHrs">400</span>hrs&nbsp;&#64;&nbsp;<span id="niMls">3220.0</span>&nbsp;or&nbsp;<span id="niDate">20 September 2014</span><br>Remaining&#58;&nbsp;<span id="niHrem">50.3</span>&nbsp;&#47;&#47;&nbsp;<span id="niDrem">20<span>&nbsp;days</span></span></td>
-              <td><button class="cirStatW">SEE</button></td>
+              <td><button class="cirStatW"></button></td>
               <td></td>
               <td></td></tr>
-              </table>
+              </table></form>
             </div>
         </div>
         </div>
-        <div class="multiP"><div class="panel">
+        <div class="multiP"><form id="fMulti"><div class="panel">
         <div class="panel-heading"><div class="panel-title">DEFECTS</div></div>
         <div class="panel-body"><div class="sDef">
             <table class="tDef">
@@ -229,10 +229,10 @@
                <tr><td>Status</td>
                 <td rowspan="2"><button class="cfm">CONFIRM</button></td>
                 <td rowspan="2"><button class="edBtn">EDIT</button></td></tr>
-                <tr><td><button class="cirStatW">SEE</button></td>
+                <tr><td><button class="cirStatW"></button></td>
                 <td></td>
                 <td></td></tr>
-            </table></div></div></div>
+            </table></div></div></div></form>
         </div>
         <div class="stFoot" align="center">
         <button id="airBtn">ACCESS PREVIOUS AIR</button>

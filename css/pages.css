@@ -889,3 +889,4 @@ table{width:100%;text-align:center;}.multiP{display:inline-flex;width:100%;}.mul
 .sumDef{font-variant:normal;}.trUnd{text-decoration:underline;}#subAir{width:18%;background-color:green;font-weight:bold;font-size:20px;border:2px solid black;height:117px;margin-left:5px;}
 #sumDef tr td:nth-child(1){border-right:2px solid black;}
 #dClaim{text-align:center;font-variant:normal;font-size:12px;}
+#fMulti{display:inherit;width:100%;}
